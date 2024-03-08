@@ -11,17 +11,19 @@ Pix2Text (P2T) 更多信息：[https://www.breezedeus.com/pix2text](https://www.
 
 ---
 
-- 修改为黑色界面
-- <img title="" src="image/README/1709882150094.png" alt="1709882150094" style="zoom:25%;"> <img src="image/README/1709882178752.png" title="" alt="1709882178752" style="zoom:33%;">
 
----
-
----
 
 ![1709877528998](image/README_cn/1709877528998.gif)
 
 ![1709877536842](image/README_cn/1709877536842.gif)
 
 ![1709877543663](image/README_cn/1709877543663.gif)
+
+---
+---
+
+
+- 修改为黑色界面
+- <img title="" src="image/README/1709882150094.png" alt="1709882150094" style="zoom:25%;"> <img src="image/README/1709882178752.png" title="" alt="1709882178752" style="zoom:33%;">
 
 
