@@ -1,6 +1,8 @@
-<div align="center">
-  <img src="./docs/figs/p2t-logo.png" width="250px"/>
-  <div>&nbsp;</div>
+![1709877528998](image/README_cn/1709877528998.gif)
+
+![1709877536842](image/README_cn/1709877536842.gif)
+
+![1709877543663](image/README_cn/1709877543663.gif)
 
 [![Discord](https://img.shields.io/discord/1200765964434821260?label=Discord)](https://discord.gg/tGuFEybd)
 [![Downloads](https://static.pepy.tech/personalized-badge/pix2text?period=total&units=international_system&left_color=grey&right_color=orange&left_text=Downloads)](https://pepy.tech/project/pix2text)
@@ -23,7 +25,6 @@
 
 [English](./README.md) | 中文
 
-
 </div>
 
 # Pix2Text (P2T)
@@ -42,20 +43,17 @@
 * 模型自动下载增加国内站点；
 * 优化对检测 boxes 的合并逻辑。
 
-
 ## Update 2023.07.03：发布 V0.2.3
 
 主要变更：
+
 * 训练了新的**公式识别模型**，供 **[P2T网页版](https://p2t.breezedeus.com)** 使用。新模型精度更高，尤其对**手写公式**和**多行公式**类图片。具体参考：[Pix2Text 新版公式识别模型 | Breezedeus.com](https://www.breezedeus.com/article/p2t-mfd-20230702) 。
 * 优化了对检测出的boxes的排序逻辑，以及对混合图片的处理逻辑，使得最终识别效果更符合直觉。
 * 优化了识别结果的合并逻辑，自动判断是否该换行，是否分段。
 
-
 了解更多：[RELEASE.md](./RELEASE.md) 。
 
 ---
-
-
 
 **Pix2Text (P2T)** 期望成为 **[Mathpix](https://mathpix.com/)** 的**免费开源 Python **替代工具，目前已经可以完成 **Mathpix** 的核心功能。**Pix2Text (P2T)** 自 **V0.2** 开始，支持识别**既包含文字又包含公式的混合图片**，返回效果类似于 **Mathpix**。P2T 的核心原理见下图（文字识别支持**中文**和**英文**）：
 
@@ -63,14 +61,9 @@
   <img src="./docs/figs/arch-flow2.jpg" alt="Pix2Text流程" width="600px"/>
 </div>
 
-
 **P2T** 使用开源工具  **[CnSTD](https://github.com/breezedeus/cnstd)** 检测出图片中**数学公式**所在位置，再交由 **P2T** 自己的**公式识别引擎（LatexOCR）** 识别出各对应位置数学公式的Latex表示。图片的剩余部分再交由 **文字识别引擎（[CnOCR](https://github.com/breezedeus/cnocr) 或 [EasyOCR](https://github.com/JaidedAI/EasyOCR)）** 进行文字检测和文字识别。最后 **P2T** 合并所有识别结果，获得最终的图片识别结果。感谢这些开源工具。
 
-
-
 P2T 作为Python3工具包，对于不熟悉Python的朋友不太友好，所以我们也发布了**可免费使用**的 **[P2T网页版](https://p2t.breezedeus.com)**，直接把图片丢进网页就能输出P2T的解析结果。**网页版会使用最新的模型，效果会比开源模型更好。**
-
-
 
 感兴趣的朋友欢迎扫码加小助手为好友，备注 `p2t`，小助手会定期统一邀请大家入群。群内会发布P2T相关工具的最新进展：
 
@@ -78,20 +71,16 @@ P2T 作为Python3工具包，对于不熟悉Python的朋友不太友好，所以
   <img src="./docs/figs/wx-qr-code.JPG" alt="微信群二维码" width="300px"/>
 </div>
 
-
-
 作者也维护 **知识星球** [**P2T/CnOCR/CnSTD私享群**](https://t.zsxq.com/FEYZRJQ) ，这里面的提问会较快得到作者的回复，欢迎加入。**知识星球私享群**也会陆续发布一些P2T/CnOCR/CnSTD相关的私有资料，包括**部分未公开的模型**，**购买付费模型享优惠**，**不同应用场景的调用代码**，使用过程中遇到的难题解答等。星球也会发布P2T/OCR/STD相关的最新研究资料。
-
-
 
 ## 支持的语言列表
 
 Pix2Text 的文字识别引擎支持 **`80+` 种语言**，如**英文、简体中文、繁体中文、越南语**等。其中，**英文**和**简体中文**识别使用的是开源 OCR 工具 **[CnOCR](https://github.com/breezedeus/cnocr)** ，其他语言的识别使用的是开源 OCR 工具 **[EasyOCR](https://github.com/JaidedAI/EasyOCR)** ，感谢相关的作者们。
 
 支持的**语言列表**和**语言代码**如下：
+
 <details>
 <summary>↓↓↓ Click to show details ↓↓↓</summary>
-
 
 | Language            | Code Name   |
 | ------------------- | ----------- |
@@ -179,12 +168,9 @@ Pix2Text 的文字识别引擎支持 **`80+` 种语言**，如**英文、简体�
 | Uzbek               | uz          |
 | Vietnamese          | vi          |
 
-
 > Ref: [Supported Languages](https://www.jaided.ai/easyocr/) .
 
 </details>
-
-
 
 ## P2T 网页版
 
@@ -192,13 +178,9 @@ Pix2Text 的文字识别引擎支持 **`80+` 种语言**，如**英文、简体�
 
 受限于机器资源，网页版当前只支持**简体中文和英文**，要尝试其他语言上的效果，请使用以下的**在线 Demo**。
 
-
-
 ## 在线 Demo 🤗
 
 也可以使用 **[在线 Demo](https://huggingface.co/spaces/breezedeus/Pix2Text-Demo)** 尝试 **P2T** 在不同语言上的效果。但在线 Demo 使用的硬件配置较低，速度会较慢。如果是简体中文或者英文图片，建议使用 **[P2T网页版](https://p2t.breezedeus.com)**。
-
-
 
 ## 使用说明
 
@@ -226,8 +208,6 @@ print(only_text)
 
 返回结果 `outs` 是个 `dict`，其中 key `position` 表示Box位置信息，`type` 表示类别信息，而 `text` 表示识别的结果。具体说明见[接口说明](#接口说明)。
 
-
-
 ### 识别纯公式图片
 
 对于只包含数学公式的图片，使用函数 `.recognize_formula()` 可以把数学公式识别为LaTeX 表达式。如针对以下图片 ([docs/examples/math-formula-42.png](docs/examples/math-formula-42.png))：
@@ -235,7 +215,6 @@ print(only_text)
 <div align="center">
   <img src="./docs/examples/math-formula-42.png" alt="Pure Math Formula image" width="300px"/>
 </div>
-
 
 调用方式如下：
 
@@ -258,7 +237,6 @@ print(outs)
   <img src="./docs/examples/general.jpg" alt="Pure Math Formula image" width="400px"/>
 </div>
 
-
 调用方式如下：
 
 ```python
@@ -271,9 +249,6 @@ print(outs)
 ```
 
 返回结果为字符串，即对应的文字序列。具体说明见[接口说明](#接口说明)。
-
-
-
 
 ## 示例
 
@@ -294,8 +269,6 @@ $ p2t predict -l en -a mfd -t yolov7 --analyzer-model-fp ~/.cnstd/1.2/analysis/m
 > ```bash
 > $ p2t predict -l en -a mfd -t yolov7_tiny --resized-shape 768 --save-analysis-res out_tmp.jpg --auto-line-break -i docs/examples/en1.jpg
 > ```
-
-
 
 ### 简体中文
 
@@ -333,9 +306,8 @@ $ p2t predict -l en,ch_tra -a mfd -t yolov7 --analyzer-model-fp ~/.cnstd/1.2/ana
 > $ p2t predict -l en,ch_tra -a mfd -t yolov7_tiny --resized-shape 768 --save-analysis-res out_tmp.jpg -i docs/examples/ch_tra.jpg
 > ```
 
-
-
 ### 越南语
+
 **识别效果**：
 
 ![Pix2Text 识别越南语](docs/figs/output-vietnamese.jpg)
@@ -352,7 +324,6 @@ $ p2t predict -l en,vi -a mfd -t yolov7 --analyzer-model-fp ~/.cnstd/1.2/analysi
 > $ p2t predict -l en,vi -a mfd -t yolov7_tiny --resized-shape 768 --save-analysis-res out_tmp.jpg -i docs/examples/vietnamese.jpg
 > ```
 
-
 ## 模型下载
 
 ### 开源免费模型
@@ -363,13 +334,9 @@ $ p2t predict -l en,vi -a mfd -t yolov7 --analyzer-model-fp ~/.cnstd/1.2/analysi
 >
 > 如果已成功运行上面的示例，说明模型已完成自动下载，可忽略本节后续内容。
 
-
-
 ### 付费模型
 
 除了上面免费的开源模型，P2T 也训练了精度更高的数学公式检测和识别模型，这些模型供 **[P2T网页版](https://p2t.breezedeus.com)** 使用，它们的效果也可以在网页版体验。这些模型不是免费的（抱歉开源作者也是要喝咖啡的），具体可参考 [Pix2Text (P2T) | Breezedeus.com](https://www.breezedeus.com/pix2text) 。
-
-
 
 ## 安装
 
@@ -391,19 +358,13 @@ pip install pix2text[multilingual]
 pip install pix2text -i https://mirrors.aliyun.com/pypi/simple
 ```
 
-
-
 如果是初次使用**OpenCV**，那估计安装都不会很顺利，bless。
 
 **Pix2Text** 主要依赖 [**CnSTD>=1.2.1**](https://github.com/breezedeus/cnstd)、[**CnOCR>=2.2.2.1**](https://github.com/breezedeus/cnocr) ，以及 [**transformers>=4.37.0**](https://github.com/huggingface/transformers) 。如果安装过程遇到问题，也可参考它们的安装说明文档。
 
-
-
-> **Warning** 
+> **Warning**
 >
 > 如果电脑中从未安装过 `PyTorch`，`OpenCV` python包，初次安装可能会遇到不少问题，但一般都是常见问题，可以自行百度/Google解决。
-
-
 
 ## 接口说明
 
@@ -427,33 +388,27 @@ class Pix2Text(object):
 ```
 
 其中的各参数说明如下：
+
 * `languages` (str or Sequence[str]): 文字识别对应的语言代码序列；默认为 `('en', 'ch_sim')`，表示可识别英文与简体中文；
-	
 * `analyzer_config` (dict): 分类模型对应的配置信息；默认为 `None`，表示使用默认配置（使用**MFD** Analyzer）：
-	
+
   ```python
   {
         'model_name': 'mfd'  # 可以取值为 'mfd'（MFD），或者 'layout'（版面分析）
   }
-	```
-	
+  ```
 * `text_config` (dict): 文字识别模型对应的配置信息；默认为 `None`，表示使用默认配置：
 
   ```python
   {}
   ```
-
 * `formula_config` (dict): 公式识别模型对应的配置信息；默认为 `None`，表示使用默认配置：
 
   ```python
   {}
   ```
-  
 * `device` (str): 使用什么资源进行计算，支持 `['cpu', 'cuda', 'gpu', 'mps']` 等；默认为 `None`，表示自动选择设备；
-
 * `**kwargs` (): 预留的其他参数；目前未被使用。
-
-
 
 ### 识别类函数
 
@@ -467,8 +422,6 @@ class Pix2Text(object):
     ) -> List[Dict[str, Any]]:
 ```
 
-
-
 其中的输入参数说明如下：
 
 * `img` (`str` or `Image.Image`)：待识别图片的路径，或者利用 `Image.open()` 已读入的图片 `Image` 。
@@ -480,11 +433,10 @@ class Pix2Text(object):
   * `det_bbox_max_expand_ratio (float)`: 扩展检测到的文本边界框（bbox）的高度。这个值表示相对于原始 bbox 高度的上下最大扩展比例；默认值为 `0.2`。
   * `mfr_batch_size (int)`: MFR 预测时使用的 batch size；默认值为 `1`。
 
-
-
-返回结果为列表（`list`），列表中的每个元素为`dict`，包含如下 `key`：
+返回结果为列表（`list`），列表中的每个元素为 `dict`，包含如下 `key`：
 
 * `type`：识别出的图像类别；
+
   * 对于 **MFD Analyzer**（数学公式检测），取值为 `text`（纯文本）、`isolated`（独立行的数学公式） 或者 `embedding`（行内的数学公式）；
   * 对于 **Layout Analyzer**（版面分析），取值为版面分析结果类别。
 * `text`：识别出的文字或Latex表达式；
@@ -492,8 +444,7 @@ class Pix2Text(object):
 * `line_number`：仅在使用 **MFD Analyzer** 时，才会包含此字段。此字段为 Box 所在的行号（第一行 **`line_number=0`**），值相同的 Box 表示它们在同一行。
 
   > 注意：此取值从 P2T **v0.2.3** 开始才有，之前版本没有此 `key`。
-
-
+  >
 
 `Pix2Text` 类也实现了 `__call__()` 函数，其功能与 `.recognize()` 函数完全相同。所以才会有以下的调用方式：
 
@@ -509,8 +460,6 @@ only_text = merge_line_texts(outs, auto_line_break=True)
 print(only_text)
 ```
 
-
-
 #### 识别纯文字图片
 
 通过调用类 **`Pix2Text`** 的类函数 `.recognize_text()` 完成对指定图片进行文字识别。此时，Pix2Text 提供了一般的文字识别功能。类函数 `.recognize_text()` 说明如下：
@@ -523,16 +472,12 @@ print(only_text)
     ) -> Union[str, List[str]]:
 ```
 
-
-
 其中的输入参数说明如下：
 
 * `imgs` (`Union[str, Path, Image.Image, List[str], List[Path], List[Image.Image]]`)：待识别图片的路径，或者利用 `Image.open()` 已读入的图片 `Image` 。支持单张图片，或者多张图片列表。
 * `kwargs`: 传入文字识别接口的其他参数。
 
 返回结果为识别后文本字符串（输入为多张图片时返回是同样长度的列表）。
-
-
 
 #### 识别纯公式图片
 
@@ -547,8 +492,6 @@ print(only_text)
     ) -> Union[str, List[str]]:
 ```
 
-
-
 其中的输入参数说明如下：
 
 * `imgs` (`Union[str, Path, Image.Image, List[str], List[Path], List[Image.Image]]`)：待识别图片的路径，或者利用 `Image.open()` 已读入的图片 `Image` 。支持单张图片，或者多张图片列表。
@@ -557,16 +500,9 @@ print(only_text)
 
 返回结果为识别后的 Latex 表示字符串（输入为多张图片时返回是同样长度的列表）。
 
-
-
-
-
-
 ## 脚本使用
 
 **P2T** 包含了以下命令行工具。
-
-
 
 ### 对单张图片或单个文件夹中的图片进行识别
 
@@ -611,8 +547,6 @@ $ p2t predict -h
   -h, --help                      显示此消息并退出。
 ```
 
-
-
 此命令可用于**打印对指定图片的检测和识别结果**，如运行：
 
 ```bash
@@ -621,11 +555,9 @@ $ p2t predict -a mfd --resized-shape 608 -i docs/examples/en1.jpg --save-analysi
 
 上面命令打印出识别结果，同时会把检测结果存储在 `output-en1.jpg` 文件中，类似以下效果：
 
-
 <div align="center">
   <img src="./docs/figs/output-en1.jpg" alt="P2T 数学公式检测效果图" width="600px"/>
 </div>
-
 
 ## HTTP服务
 
@@ -635,15 +567,11 @@ $ p2t predict -a mfd --resized-shape 608 -i docs/examples/en1.jpg --save-analysi
 $ pip install pix2text[serve]
 ```
 
-
-
 安装完成后，可以通过以下命令启动HTTP服务（**`-p`** 后面的数字是**端口**，可以根据需要自行调整）：
 
 ```bash
 $ p2t serve -l en,ch_sim -a mfd
 ```
-
-
 
 `p2t serve` 命令使用说明：
 
@@ -678,11 +606,7 @@ $ p2t serve -h
   -h, --help                      显示此消息并退出。
 ```
 
-
-
 服务开启后，可以使用以下方式调用服务。
-
-
 
 ### Python 调用服务
 
@@ -714,8 +638,6 @@ else:
 print(f'{only_text=}')
 ```
 
-
-
 ### Curl 调用服务
 
 如下使用 `curl` 调用服务：
@@ -724,14 +646,9 @@ print(f'{only_text=}')
 $ curl -F image=@docs/examples/mixed.jpg --form 'image_type=mixed' --form 'resized_shape=768' http://0.0.0.0:8503/pix2text
 ```
 
-
-
 ### 其他语言调用服务
 
 请参照 `curl` 的调用方式自行实现。
-
-
-
 
 ## 给作者来杯咖啡
 
@@ -742,4 +659,3 @@ $ curl -F image=@docs/examples/mixed.jpg --form 'image_type=mixed' --form 'resiz
 官方代码库：[https://github.com/breezedeus/pix2text](https://github.com/breezedeus/pix2text) 。
 
 Pix2Text (P2T) 更多信息：[https://www.breezedeus.com/pix2text](https://www.breezedeus.com/pix2text) 。
-
