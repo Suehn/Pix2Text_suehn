@@ -10,6 +10,21 @@ Pix2Text (P2T) 更多信息：[https://www.breezedeus.com/pix2text](https://www.
 - python版本3.9, 按requirements.txt安装依赖
 - 执行3rec_and_render.py即可调用, 效果如下
 
+---
+
+---
+
+
+
+- 修改为黑色界面
+- ![1709881853571](image/README/1709881853571.png)
+
+---
+
+---
+
+
+
 
 
 ![1709877528998](image/README_cn/1709877528998.gif)

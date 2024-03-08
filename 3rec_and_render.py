@@ -66,10 +66,10 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("图片转LaTeX")
-        self.setStyleSheet("font-size: 24px;")
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
-        self.resize(800, 600)
+        self.resize(1440, 450)
         self.browser = QWebEngineView()
+        self.setStyleSheet("font-size: 24px;")
         self.initUI()
 
     def initUI(self):
@@ -85,6 +85,27 @@ class MainWindow(QMainWindow):
         container.setLayout(layout)
         self.setCentralWidget(container)
 
+        # 设置初始HTML内容以使浏览器背景为黑色
+        initial_html = """
+        <html>
+        <head>
+        <style>
+            body { background-color: rgb(50, 50, 50); color: rgb(220, 220, 225); font-size: 24px; }
+            p { font-size: 24px; }
+        </style>
+        </head>
+        <body>
+        <p>请从剪贴板中识别图片以渲染LaTeX公式</p>
+        </body>
+        </html>
+        """
+        self.browser.setHtml(initial_html)
+
+    def showEvent(self, event):
+        self.setStyleSheet(
+            "background-color: rgb(50, 50, 50); color: rgb(220, 220, 225); font-size: 24px;"
+        )
+
     def onButtonClick(self):
         result_text = recognize_image_from_clipboard()
         if result_text:
@@ -95,6 +116,7 @@ class MainWindow(QMainWindow):
         <html>
         <head>
         <style>
+            body {{ background-color: rgb(50, 50, 50); color: rgb(220, 220, 225); font-size: 24px; }}
             p {{ font-size: 24px; }}
         </style>
         <script>
@@ -117,14 +139,14 @@ class MainWindow(QMainWindow):
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
         </head>
         <body>
-        <p>看看: {latex_str}</p>
+        <p>主人, 您的任务已完成:<br><br> {latex_str}</p>
         </body>
         </html>
         """
         self.browser.setHtml(html_template)
         self.browser.setZoomFactor(1.5)
 
-        self.button.setFixedWidth(200)
+        self.button.setFixedWidth(400)
         self.button.setFixedHeight(50)
 
 
